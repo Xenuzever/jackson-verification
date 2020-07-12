@@ -5,15 +5,10 @@ import com.fasterxml.jackson.dataformat.xml.annotation.JacksonXmlProperty;
 import java.util.ArrayList;
 import java.util.List;
 import lombok.Data;
+import lombok.Getter;
 
 @Data
 public class Content {
-
-  static List<Item> staticItems;
-
-  {
-    staticItems = new ArrayList<>();
-  }
 
   private String title;
 
@@ -23,10 +18,13 @@ public class Content {
   @JacksonXmlElementWrapper(useWrapping = false)
   private List<Item> items;
 
+  @Getter(lazy = true)
+  private static final List<Item> staticItems = new ArrayList<>();
+
   public void setItems(List<Item> items) {
     if (items != null) {
-      staticItems.addAll(items);
+      getStaticItems().addAll(items);
     }
-    this.items = staticItems;
+    this.items = getStaticItems();
   }
 }

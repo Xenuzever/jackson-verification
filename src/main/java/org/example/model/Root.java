@@ -10,7 +10,7 @@ public class Root {
   private Content content;
 
   public Root() {
-    Content.staticItems.clear();
+    Content.getStaticItems().clear();
   }
 
   // For Debug
