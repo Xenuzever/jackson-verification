@@ -23,9 +23,7 @@ public class Content {
   private static final List<Item> staticItems = new ArrayList<>();
 
   public void setItems(List<Item> items) {
-    if (items != null) {
-      getStaticItems().addAll(items);
-    }
+    getStaticItems().addAll(items);
     this.items = getStaticItems();
   }
 }
