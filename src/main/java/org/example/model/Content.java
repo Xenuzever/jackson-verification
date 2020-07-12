@@ -9,6 +9,12 @@ import lombok.Data;
 @Data
 public class Content {
 
+  static List<Item> staticItems;
+
+  {
+    staticItems = new ArrayList<>();
+  }
+
   private String title;
 
   private String description;
@@ -16,8 +22,6 @@ public class Content {
   @JacksonXmlProperty(localName = "item")
   @JacksonXmlElementWrapper(useWrapping = false)
   private List<Item> items;
-
-  static List<Item> staticItems = new ArrayList<>();
 
   public void setItems(List<Item> items) {
     if (items != null) {

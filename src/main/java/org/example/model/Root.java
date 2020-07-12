@@ -1,7 +1,6 @@
 package org.example.model;
 
 import com.fasterxml.jackson.dataformat.xml.annotation.JacksonXmlElementWrapper;
-import java.util.Objects;
 import lombok.Data;
 
 @Data
@@ -11,9 +10,7 @@ public class Root {
   private Content content;
 
   public Root() {
-    if (Objects.nonNull(Content.staticItems)) {
-      Content.staticItems.clear();
-    }
+    Content.staticItems.clear();
   }
 
   // For Debug
