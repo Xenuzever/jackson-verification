@@ -5,7 +5,7 @@ import com.fasterxml.jackson.dataformat.xml.XmlMapper;
 import java.io.IOException;
 import java.nio.file.Files;
 import java.util.stream.IntStream;
-import org.example.model.Root;
+import org.example.model.sample.Root;
 import org.junit.Test;
 
 public class MainTest {
