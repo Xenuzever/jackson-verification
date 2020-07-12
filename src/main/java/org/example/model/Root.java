@@ -13,10 +13,6 @@ public class Root {
   @JacksonXmlElementWrapper
   private Content content;
 
-  public Root() {
-    Content.staticItems.clear();
-  }
-
   // For Debug
   @Override
   public String toString() {

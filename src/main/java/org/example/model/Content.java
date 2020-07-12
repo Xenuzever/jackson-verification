@@ -1,6 +1,7 @@
 package org.example.model;
 
 import com.fasterxml.jackson.dataformat.xml.annotation.JacksonXmlElementWrapper;
+import com.fasterxml.jackson.dataformat.xml.annotation.JacksonXmlProperty;
 import java.util.ArrayList;
 import java.util.List;
 import lombok.Data;
@@ -12,15 +13,19 @@ public class Content {
 
   private String description;
 
-  @JacksonXmlElementWrapper
-  private Item item;
-  static final List<Item> staticItems = new ArrayList<>();
+  @JacksonXmlProperty(localName = "item")
+  @JacksonXmlElementWrapper(useWrapping = false)
+  static final List<Item> items = new ArrayList<>();
+
+  public Content() {
+    items.clear();
+  }
 
   public void setItem(Item item) {
-    staticItems.add(item);
+    items.add(item);
   }
 
   public List<Item> getItems() {
-    return staticItems;
+    return items;
   }
 }
