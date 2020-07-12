@@ -8,25 +8,25 @@ import java.util.List;
 @Data
 public class Channel {
 
-	private String generator;
+  private String generator;
 
-	private String title;
+  private String title;
 
-	private String link;
+  private String link;
 
-	private String language;
+  private String language;
 
-	private String webMaster;
+  private String webMaster;
 
-	private String copyright;
+  private String copyright;
 
-	private String lastBuildDate;
+  private String lastBuildDate;
 
-	private String description;
+  private String description;
 
-	private List<Item> items = new ArrayList<>();
+  private List<Item> items = new ArrayList<>();
 
-	public void setItem(Item item) {
-		items.add(item);
-	}
+  public void setItem(Item item) {
+    items.add(item);
+  }
 }
