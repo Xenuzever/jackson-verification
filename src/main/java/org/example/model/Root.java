@@ -6,6 +6,8 @@ import lombok.Data;
 @Data
 public class Root {
 
+  private String version;
+
   @JacksonXmlElementWrapper
   private Content content;
 
@@ -19,6 +21,8 @@ public class Root {
 
     StringBuilder builder = new StringBuilder()
         .append("root:")
+        .append(System.lineSeparator())
+        .append("\t").append("version:").append(getVersion())
         .append(System.lineSeparator())
         .append("\t").append("content:")
         .append(System.lineSeparator())
