@@ -18,11 +18,13 @@ public class Root {
   public String toString() {
 
     StringBuilder builder = new StringBuilder()
-        .append("content:")
+        .append("root:")
         .append(System.lineSeparator())
-        .append("\t").append("titile:").append(content.getTitle())
+        .append("\t").append("content:")
         .append(System.lineSeparator())
-        .append("\t").append("description:").append(content.getDescription());
+        .append("\t\t").append("titile:").append(content.getTitle())
+        .append(System.lineSeparator())
+        .append("\t\t").append("description:").append(content.getDescription());
 
     for (Item item : content.getItems()) {
       builder.append(System.lineSeparator())
