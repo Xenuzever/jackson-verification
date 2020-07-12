@@ -13,10 +13,6 @@ public class Content {
 
   private List<Item> items = new ArrayList<>();
 
-  public Content() {
-    items.clear();
-  }
-
   public void setItem(Item item) {
     items.add(item);
   }
