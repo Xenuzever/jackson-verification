@@ -1,0 +1,21 @@
+<root version="2.0">
+  <content>
+    <title>XML Title</title>
+    <description>XML Description</description>
+    <item>
+      <title>Item - 1</title>
+      <description>Description for item 1 ...</description>
+      <link url="https://exmaple.org/1">LINK1</link>
+    </item>
+    <item>
+      <title>Item - 2</title>
+      <description>Description for item 2 ...</description>
+      <link url="https://exmaple.org/2">LINK2</link>
+    </item>
+    <item>
+      <title>Item - 3</title>
+      <description>Description for item 3 ...</description>
+      <link url="https://exmaple.org/3">LINK3</link>
+    </item>
+  </content>
+</root>
