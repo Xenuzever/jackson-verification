@@ -18,6 +18,7 @@ public class Content {
   @JacksonXmlElementWrapper(useWrapping = false)
   private List<Item> items;
 
+  // JVM ロード時ではなく、使用するときに初めて初期化する。
   @Getter(lazy = true)
   private static final List<Item> staticItems = new ArrayList<>();
 
