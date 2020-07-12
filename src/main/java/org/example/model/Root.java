@@ -14,7 +14,7 @@ public class Root {
   private Content content;
 
   public Root() {
-    Content.getStaticItems().clear();
+    Content.staticItems.clear();
   }
 
   // For Debug
